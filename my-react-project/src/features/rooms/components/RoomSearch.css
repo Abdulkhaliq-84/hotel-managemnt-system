@@ -1,0 +1,189 @@
+/* Room Search Styles */
+.rooms-search {
+  margin-bottom: 24px;
+}
+
+.rooms-search-container {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(30, 64, 175, 0.1);
+  border: 1px solid rgba(30, 64, 175, 0.1);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  align-items: end;
+}
+
+.rooms-search-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rooms-search-label {
+  color: #1e40af;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.rooms-search-input,
+.rooms-search-select {
+  padding: 10px 12px;
+  border: 1px solid rgba(30, 64, 175, 0.2);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #374151;
+  transition: all 0.2s ease;
+}
+
+.rooms-search-input:focus,
+.rooms-search-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.rooms-search-input::placeholder {
+  color: #9ca3af;
+}
+
+.rooms-search-price-range {
+  grid-column: span 1;
+}
+
+.rooms-search-price-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.rooms-search-price-input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid rgba(30, 64, 175, 0.2);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #374151;
+  transition: all 0.2s ease;
+}
+
+.rooms-search-price-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.rooms-search-price-separator {
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.rooms-search-actions {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+}
+
+.rooms-search-clear-btn,
+.rooms-search-export-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(30, 64, 175, 0.2);
+}
+
+.rooms-search-clear-btn {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: #ffffff;
+}
+
+.rooms-search-clear-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(30, 64, 175, 0.3);
+}
+
+.rooms-search-clear-btn:active {
+  transform: translateY(0);
+}
+
+.rooms-search-export-btn {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  color: #ffffff;
+}
+
+.rooms-search-export-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(5, 150, 105, 0.3);
+}
+
+.rooms-search-export-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rooms-search-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+  }
+  
+  .rooms-search-input,
+  .rooms-search-select,
+  .rooms-search-price-input {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+  
+  .rooms-search-clear-btn,
+  .rooms-search-export-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  
+  .rooms-search-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rooms-search-container {
+    padding: 16px;
+    gap: 12px;
+  }
+  
+  .rooms-search-label {
+    font-size: 13px;
+  }
+  
+  .rooms-search-input,
+  .rooms-search-select,
+  .rooms-search-price-input {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+  
+  .rooms-search-price-inputs {
+    gap: 6px;
+    flex-direction: column;
+  }
+  
+  .rooms-search-price-input {
+    width: 100%;
+  }
+}

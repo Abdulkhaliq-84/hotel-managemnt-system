@@ -1,0 +1,247 @@
+/* Room Availability Styles */
+.room-availability {
+  margin-top: 24px;
+}
+
+.calendar-container {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(30, 64, 175, 0.1);
+  border: 1px solid rgba(30, 64, 175, 0.1);
+  overflow: hidden;
+}
+
+.calendar-header {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.month-title {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.month-nav-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.month-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background-color: rgba(30, 64, 175, 0.1);
+}
+
+.day-header {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: #ffffff;
+  padding: 12px 8px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.calendar-day {
+  background-color: #ffffff;
+  min-height: 60px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.calendar-day:hover {
+  background-color: rgba(30, 64, 175, 0.05);
+  transform: scale(1.02);
+}
+
+.calendar-day.empty {
+  background-color: #f8fafc;
+  cursor: default;
+}
+
+.calendar-day.today {
+  border: 2px solid #3b82f6;
+  font-weight: 700;
+}
+
+.day-number {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.availability-indicator {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: rgba(30, 64, 175, 0.9);
+  color: #ffffff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Availability Colors */
+.calendar-day.available {
+  background-color: #f0fdf4;
+}
+
+.calendar-day.low-occupancy {
+  background-color: #fef3c7;
+}
+
+.calendar-day.medium-occupancy {
+  background-color: #fde68a;
+}
+
+.calendar-day.high-occupancy {
+  background-color: #fecaca;
+}
+
+.calendar-legend {
+  background-color: #ffffff;
+  padding: 16px 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(30, 64, 175, 0.1);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #374151;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.legend-color.available {
+  background-color: #f0fdf4;
+}
+
+.legend-color.low-occupancy {
+  background-color: #fef3c7;
+}
+
+.legend-color.medium-occupancy {
+  background-color: #fde68a;
+}
+
+.legend-color.high-occupancy {
+  background-color: #fecaca;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .calendar-header {
+    padding: 16px;
+  }
+  
+  .month-title {
+    font-size: 18px;
+  }
+  
+  .month-nav-btn {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .calendar-day {
+    min-height: 50px;
+    padding: 6px;
+  }
+  
+  .day-number {
+    font-size: 12px;
+  }
+  
+  .availability-indicator {
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+  }
+  
+  .calendar-legend {
+    padding: 12px 16px;
+    gap: 16px;
+  }
+  
+  .legend-item {
+    font-size: 11px;
+  }
+  
+  .legend-color {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-grid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  
+  .calendar-day {
+    min-height: 40px;
+    padding: 4px;
+  }
+  
+  .day-number {
+    font-size: 11px;
+  }
+  
+  .availability-indicator {
+    width: 14px;
+    height: 14px;
+    font-size: 8px;
+  }
+  
+  .calendar-legend {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}

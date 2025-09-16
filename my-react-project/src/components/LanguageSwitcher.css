@@ -1,0 +1,152 @@
+.language-switcher {
+  position: relative;
+  display: inline-block;
+}
+
+.language-switcher-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #ffffff;
+  transition: all 0.2s;
+  min-width: 120px;
+  backdrop-filter: blur(10px);
+  direction: ltr; /* Keep button content in LTR even in RTL mode */
+}
+
+.language-switcher-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+}
+
+.language-flag {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.language-name {
+  flex: 1;
+  text-align: left;
+}
+
+[dir="rtl"] .language-name {
+  text-align: right;
+}
+
+.language-arrow {
+  transition: transform 0.2s;
+}
+
+.language-arrow.open {
+  transform: rotate(180deg);
+}
+
+.language-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+  animation: slideDown 0.2s ease-out;
+  min-width: 150px;
+}
+
+[dir="rtl"] .language-dropdown {
+  left: auto;
+  right: 0;
+  direction: ltr; /* Keep dropdown content in LTR */
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+[dir="rtl"] .language-option {
+  text-align: right;
+}
+
+.language-option:hover {
+  background: #f3f4f6;
+}
+
+.language-option.active {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.check-icon {
+  margin-left: auto;
+  color: #2563eb;
+}
+
+[dir="rtl"] .check-icon {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .language-switcher-button {
+    background: #1f2937;
+    border-color: #374151;
+    color: #f3f4f6;
+  }
+  
+  .language-switcher-button:hover {
+    background: #374151;
+    border-color: #4b5563;
+  }
+  
+  .language-dropdown {
+    background: #1f2937;
+    border-color: #374151;
+  }
+  
+  .language-option {
+    color: #f3f4f6;
+  }
+  
+  .language-option:hover {
+    background: #374151;
+  }
+  
+  .language-option.active {
+    background: #1e3a8a;
+    color: #93c5fd;
+  }
+}

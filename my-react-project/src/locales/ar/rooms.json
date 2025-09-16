@@ -1,0 +1,120 @@
+{
+  "rooms": {
+    "title": "إدارة الغرف",
+    "loading": "جاري تحميل الغرف...",
+    "noRooms": "لا توجد غرف",
+    "noRoomsMessage": "لا توجد غرف في النظام. أضف أول غرفة للبدء.",
+    "addNewRoom": "إضافة غرفة جديدة",
+    "checkAvailability": "التحقق من التوفر",
+    "viewDetails": "عرض التفاصيل",
+    "editRoom": "تعديل الغرفة",
+    "createRoom": "إنشاء غرفة",
+    "updateRoom": "تحديث الغرفة",
+    "confirmDelete": "هل أنت متأكد من حذف هذه الغرفة؟",
+    "roomDeleted": "تم حذف الغرفة",
+    "roomDeletedMessage": "تم حذف الغرفة بنجاح من النظام.",
+    "roomUpdated": "تم تحديث الغرفة",
+    "roomUpdatedMessage": "تم تحديث معلومات الغرفة بنجاح.",
+    "roomCreated": "تم إنشاء الغرفة",
+    "roomCreatedMessage": "تم إضافة غرفة جديدة بنجاح إلى النظام.",
+    "loadFailed": "فشل تحميل الغرف",
+    "deleteFailed": "فشل حذف الغرفة",
+    "saveFailed": "فشل حفظ الغرفة",
+    
+    "roomNumber": "رقم الغرفة",
+    "roomType": "نوع الغرفة",
+    "floor": "الطابق",
+    "price": "السعر",
+    "capacity": "السعة",
+    "lastCleaned": "آخر تنظيف",
+    "nextCleaning": "التنظيف التالي",
+    "priceRange": "نطاق السعر",
+    "person": "شخص",
+    "people": "أشخاص",
+    
+    "searchByRoomNumber": "البحث برقم الغرفة...",
+    "allRoomTypes": "جميع أنواع الغرف",
+    "allFloors": "جميع الطوابق",
+    "allStatuses": "جميع الحالات",
+    "allCapacities": "جميع السعات",
+    "floorNumber": "الطابق {{number}}",
+    
+    "stats": {
+      "totalRooms": "إجمالي الغرف",
+      "allRegistered": "جميع الغرف المسجلة",
+      "available": "متاح",
+      "readyForGuests": "جاهز للضيوف",
+      "occupied": "مشغول",
+      "currentlyOccupied": "مشغول حالياً",
+      "occupancyRate": "معدل الإشغال",
+      "currentOccupancy": "الإشغال الحالي",
+      "averagePrice": "متوسط السعر",
+      "perNight": "لليلة الواحدة",
+      "maintenance": "صيانة",
+      "underMaintenance": "تحت الصيانة"
+    },
+    
+    "status": {
+      "available": "متاح",
+      "occupied": "مشغول",
+      "maintenance": "صيانة",
+      "cleaning": "تنظيف",
+      "reserved": "محجوز"
+    },
+    
+    "types": {
+      "single": "غرفة مفردة",
+      "double": "غرفة مزدوجة",
+      "suite": "جناح",
+      "deluxe": "غرفة ديلوكس"
+    },
+    
+    "form": {
+      "basicInfo": "المعلومات الأساسية",
+      "pricingCapacity": "السعر والسعة",
+      "statusSettings": "الحالة والإعدادات",
+      "description": "الوصف",
+      "amenities": "المرافق",
+      "roomNumberPlaceholder": "مثال: 101، A-201، جناح-301",
+      "pricePerNight": "السعر لليلة الواحدة",
+      "capacityHelp": "الحد الأقصى لعدد الضيوف الذين يمكن للغرفة استيعابهم",
+      "roomActiveLabel": "الغرفة نشطة ومتاحة للحجز",
+      "roomDescription": "وصف الغرفة",
+      "descriptionPlaceholder": "صف الغرفة وميزاتها وأي خصائص خاصة...",
+      "commonAmenities": "المرافق الشائعة",
+      "customAmenities": "مرافق مخصصة",
+      "addCustomAmenity": "إضافة مرفق مخصص...",
+      "selectedAmenities": "المرافق المحددة"
+    },
+    
+    "validation": {
+      "roomNumberRequired": "رقم الغرفة مطلوب",
+      "roomNumberFormat": "يمكن أن يحتوي رقم الغرفة على أحرف وأرقام وشرطات فقط",
+      "floorMin": "يجب أن يكون الطابق 1 على الأقل",
+      "floorMax": "لا يمكن أن يتجاوز الطابق 100",
+      "priceMin": "لا يمكن أن يكون السعر سالباً",
+      "priceMax": "لا يمكن أن يتجاوز السعر 10,000 ريال",
+      "capacityMin": "يجب أن تكون السعة 1 على الأقل",
+      "capacityMax": "لا يمكن أن تتجاوز السعة 10",
+      "descriptionMax": "لا يمكن أن يتجاوز الوصف 500 حرف"
+    },
+    
+    "amenities": {
+      "wifi": "واي فاي",
+      "tv": "تلفاز",
+      "airConditioning": "تكييف",
+      "miniBar": "ميني بار",
+      "roomService": "خدمة الغرف",
+      "balcony": "شرفة",
+      "oceanView": "إطلالة على البحر",
+      "mountainView": "إطلالة على الجبل",
+      "kitchen": "مطبخ",
+      "jacuzzi": "جاكوزي",
+      "workDesk": "مكتب عمل",
+      "safe": "خزنة",
+      "iron": "مكواة",
+      "hairDryer": "مجفف شعر",
+      "coffeeMaker": "آلة قهوة"
+    }
+  }
+}

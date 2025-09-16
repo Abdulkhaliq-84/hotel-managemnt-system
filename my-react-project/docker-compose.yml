@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    container_name: react-reuse-app
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+
+  # Development service (optional)
+  react-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3001:3000"
+    container_name: react-reuse-dev
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+    environment:
+      - NODE_ENV=development
+    profiles:
+      - dev

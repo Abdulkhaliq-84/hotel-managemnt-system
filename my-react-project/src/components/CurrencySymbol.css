@@ -1,0 +1,42 @@
+/* Currency Symbol Styles */
+.currency-symbol {
+  display: inline-block;
+  vertical-align: middle;
+  /* Add slight opacity for better integration */
+  opacity: 0.9;
+}
+
+/* Image sizes - Saudi Riyal symbol */
+.currency-symbol-small {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.currency-symbol-medium {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.currency-symbol-large {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* Inline with text */
+.currency-inline {
+  margin: 0 2px;
+}
+
+/* RTL adjustments */
+[dir="rtl"] .currency-symbol {
+  margin-left: 4px;
+  margin-right: 0;
+}
+
+[dir="ltr"] .currency-symbol {
+  margin-right: 4px;
+  margin-left: 0;
+}

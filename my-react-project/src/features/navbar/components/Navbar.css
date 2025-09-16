@@ -1,0 +1,212 @@
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+  border-radius: 8px 8px 0 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+/* Logo Section */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.logo-text {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  color: #e0e7ff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+}
+
+.nav-link.active {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.4);
+}
+
+.nav-link:focus {
+  outline: none;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Right Section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+/* RTL Support for Navbar */
+[dir="rtl"] .navbar-container {
+  /* Keep the same structure, don't reverse the whole navbar */
+  direction: rtl;
+}
+
+[dir="rtl"] .navbar-logo {
+  /* Keep logo and text in the same order, just change text direction */
+  direction: rtl;
+}
+
+[dir="rtl"] .navbar-links {
+  /* Keep links in same order, just change text direction */
+  direction: rtl;
+}
+
+[dir="rtl"] .navbar-right {
+  /* Keep right section items in same order */
+  direction: rtl;
+  gap: 16px;
+}
+
+[dir="rtl"] .nav-link {
+  /* Just adjust text alignment for RTL */
+  direction: rtl;
+}
+
+.notification-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  flex-shrink: 0;
+}
+
+.notification-icon:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.2);
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+  border-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 12px 16px;
+    gap: 12px;
+  }
+  
+  .navbar-links {
+    gap: 8px;
+  }
+  
+  .nav-link {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+  
+  .logo-text {
+    font-size: 16px;
+  }
+  
+  /* Hide language text on small screens, show only flag */
+  .language-name {
+    display: none;
+  }
+  
+  .language-switcher-button {
+    min-width: auto;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar-links {
+    display: none;
+  }
+  
+  .navbar-container {
+    justify-content: space-between;
+  }
+  
+  .navbar-logo {
+    gap: 8px;
+  }
+  
+  .logo-text {
+    font-size: 14px;
+  }
+}

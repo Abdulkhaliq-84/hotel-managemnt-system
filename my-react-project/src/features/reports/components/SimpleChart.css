@@ -1,0 +1,284 @@
+/* Simple Chart Container */
+.simple-chart {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.simple-chart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chart-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 20px 0;
+}
+
+.chart-content {
+  width: 100%;
+}
+
+/* Bar Chart Styles */
+.chart-bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 0;
+  position: relative;
+}
+
+.chart-bar-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.chart-bar-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  min-height: 200px;
+}
+
+.chart-bar {
+  width: 60%;
+  min-width: 30px;
+  border-radius: 8px 8px 0 0;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 8px;
+  animation: growUp 0.6s ease-out;
+}
+
+@keyframes growUp {
+  from {
+    height: 0 !important;
+  }
+  to {
+    height: var(--bar-height);
+  }
+}
+
+.chart-bar:hover {
+  opacity: 0.9;
+  transform: scaleY(1.02);
+}
+
+.chart-bar-value {
+  position: absolute;
+  top: -20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  white-space: nowrap;
+}
+
+.chart-bar-label {
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+  max-width: 80px;
+  word-wrap: break-word;
+}
+
+/* Line Chart Styles */
+.chart-line {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.chart-line svg {
+  width: 100%;
+  height: 200px;
+}
+
+.chart-line path {
+  animation: drawLine 1s ease-out;
+}
+
+@keyframes drawLine {
+  from {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.chart-line circle {
+  animation: fadeIn 0.3s ease-out;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.chart-line-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.chart-line-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+}
+
+.label-text {
+  color: #6b7280;
+}
+
+.label-value {
+  color: #374151;
+  font-weight: 600;
+}
+
+/* Pie Chart Styles */
+.chart-pie {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 20px 0;
+}
+
+.pie-container {
+  flex: 1;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.pie-container svg {
+  width: 100%;
+  height: auto;
+}
+
+.pie-slice {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  animation: growPie 0.8s ease-out;
+  transform-origin: center;
+}
+
+@keyframes growPie {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pie-slice:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.pie-legend {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.legend-label {
+  flex: 1;
+  color: #374151;
+}
+
+.legend-value {
+  color: #6b7280;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chart-bars {
+    gap: 8px;
+  }
+
+  .chart-bar {
+    width: 80%;
+  }
+
+  .chart-bar-label {
+    font-size: 10px;
+  }
+
+  .chart-pie {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pie-container {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .simple-chart {
+    padding: 16px;
+  }
+
+  .chart-title {
+    font-size: 14px;
+  }
+
+  .chart-bar-value {
+    font-size: 10px;
+    top: -16px;
+  }
+
+  .chart-line-labels {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .legend-item {
+    font-size: 12px;
+  }
+}

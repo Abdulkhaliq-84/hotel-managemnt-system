@@ -1,0 +1,196 @@
+/* Import Google Fonts for Arabic */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap');
+
+/* Arabic Text Styling for Tables and UI Elements */
+
+/* Arabic font family with fallbacks */
+[dir="rtl"] {
+  font-family: 'Tajawal', 'Cairo', 'Noto Sans Arabic', 'Segoe UI Arabic', 'Traditional Arabic', 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+/* Bold Arabic text in tables */
+[dir="rtl"] .reservation-table,
+[dir="rtl"] .guest-table,
+[dir="rtl"] .rooms-table {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Table headers in Arabic should be bolder */
+[dir="rtl"] .reservation-table thead th,
+[dir="rtl"] .guest-table thead th,
+[dir="rtl"] .rooms-table thead th {
+  font-weight: 600;
+  font-size: 0.95rem;
+  font-family: 'Cairo', 'Tajawal', 'Noto Sans Arabic', sans-serif;
+}
+
+/* Table cells in Arabic */
+[dir="rtl"] .reservation-table tbody td,
+[dir="rtl"] .guest-table tbody td,
+[dir="rtl"] .rooms-table tbody td {
+  font-weight: 400;
+  font-size: 0.875rem;
+  font-family: 'Tajawal', 'Cairo', 'Noto Sans Arabic', sans-serif;
+}
+
+/* Currency display in Arabic */
+[dir="rtl"] .currency-display,
+.currency-display.currency-arabic {
+  font-weight: 500;
+  font-size: 0.875rem;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  direction: ltr; /* Keep numbers LTR even in RTL context */
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Riyal symbol sizing */
+.riyal-symbol {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.riyal-symbol.riyal-small {
+  width: 12px;
+  height: 12px;
+}
+
+.riyal-symbol.riyal-medium {
+  width: 14px;
+  height: 14px;
+}
+
+.riyal-symbol.riyal-large {
+  width: 18px;
+  height: 18px;
+}
+
+/* Currency amount styling */
+.currency-amount {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+/* Arabic text specific styling */
+.arabic-text {
+  font-weight: 500;
+  font-size: 0.9rem;
+  font-family: 'Tajawal', 'Cairo', 'Noto Sans Arabic', sans-serif;
+}
+
+/* Status badges in Arabic */
+[dir="rtl"] .reservation-badge,
+[dir="rtl"] .payment-badge,
+[dir="rtl"] .status-badge {
+  font-weight: 500;
+  font-size: 0.8rem;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+/* Action buttons tooltips in Arabic */
+[dir="rtl"] .action-btn[title] {
+  font-weight: 500;
+}
+
+/* Specific table adjustments for better readability */
+[dir="rtl"] table {
+  font-size: 0.875rem;
+}
+
+/* Prevent text from being too large in specific cells */
+[dir="rtl"] td.email,
+[dir="rtl"] td.phone,
+[dir="rtl"] td.country,
+[dir="rtl"] td.total-stays,
+[dir="rtl"] td.total-spent,
+[dir="rtl"] td.price,
+[dir="rtl"] td.capacity,
+[dir="rtl"] td.floor {
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+/* Keep action buttons normal size */
+[dir="rtl"] .action-buttons {
+  font-size: 1rem;
+}
+
+/* Adjust line height for better spacing */
+[dir="rtl"] tbody tr {
+  line-height: 1.5;
+}
+
+/* Date cells in Arabic */
+[dir="rtl"] .check-in,
+[dir="rtl"] .check-out,
+[dir="rtl"] .last-visit {
+  font-weight: 400;
+  font-size: 0.875rem;
+  font-family: 'Tajawal', 'Cairo', sans-serif;
+  direction: ltr; /* Keep dates in LTR format */
+  text-align: right;
+}
+
+/* Guest name in Arabic */
+[dir="rtl"] .guest-name {
+  font-weight: 500;
+  font-size: 0.875rem;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+/* Room information in Arabic */
+[dir="rtl"] .room-type,
+[dir="rtl"] .room-number {
+  font-weight: 400;
+  font-size: 0.875rem;
+  font-family: 'Tajawal', 'Cairo', sans-serif;
+}
+
+/* Pagination text in Arabic */
+[dir="rtl"] .pagination-info {
+  font-weight: 500;
+  font-size: 0.875rem;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+/* Form labels in Arabic */
+[dir="rtl"] .form-label,
+[dir="rtl"] .filter-label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+/* Buttons in Arabic */
+[dir="rtl"] button {
+  font-weight: 500;
+  font-size: 0.9rem;
+  font-family: 'Tajawal', 'Cairo', sans-serif;
+}
+
+/* Modal titles in Arabic */
+[dir="rtl"] .modal-header h2,
+[dir="rtl"] .profile-title,
+[dir="rtl"] .form-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+/* Section titles in Arabic */
+[dir="rtl"] .section-title {
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+/* Statistics numbers in Arabic */
+[dir="rtl"] .stat-number {
+  font-weight: 600;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  font-size: 1rem;
+}
+

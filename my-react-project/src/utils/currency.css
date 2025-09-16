@@ -1,0 +1,26 @@
+/* Currency Display Styles */
+.currency-display {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* RTL adjustments */
+[dir="rtl"] .currency-display {
+  flex-direction: row-reverse;
+}
+
+/* Ensure proper alignment in tables */
+.reservation-table .currency-display {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .reservation-table .currency-display {
+  justify-content: flex-end;
+}
+
+/* Dashboard card specific */
+.dashboard-card .currency-display {
+  font-size: inherit;
+  font-weight: inherit;
+}

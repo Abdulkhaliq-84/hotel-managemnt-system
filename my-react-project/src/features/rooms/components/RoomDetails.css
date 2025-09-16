@@ -1,0 +1,375 @@
+/* Room Details Styles */
+.rooms-details-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.rooms-details-wrapper {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(30, 64, 175, 0.2);
+  border: 1px solid rgba(30, 64, 175, 0.1);
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.rooms-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 0 24px;
+  margin-bottom: 24px;
+}
+
+.rooms-details-title {
+  color: #1e40af;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.rooms-details-close-btn {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rooms-details-close-btn:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.rooms-details-content {
+  padding: 0 24px 24px 24px;
+}
+
+.rooms-details-section {
+  margin-bottom: 32px;
+}
+
+.rooms-details-section:last-child {
+  margin-bottom: 0;
+}
+
+.rooms-details-section-title {
+  color: #1e40af;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  border-bottom: 2px solid rgba(30, 64, 175, 0.1);
+  padding-bottom: 8px;
+}
+
+.rooms-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.rooms-details-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rooms-details-label {
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.rooms-details-value {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.rooms-details-value.price {
+  color: #059669;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+.rooms-details-description {
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.rooms-details-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.rooms-details-amenity-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: #ffffff;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Status Badges */
+.rooms-details-status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-available {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.status-occupied {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.status-maintenance {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.status-cleaning {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #2563eb;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.status-reserved {
+  background-color: rgba(139, 92, 246, 0.1);
+  color: #7c3aed;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* Guest Information */
+.rooms-details-guest-info {
+  background-color: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+/* Room History */
+.rooms-details-history {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rooms-details-history-item {
+  background-color: #f9fafb;
+  border: 1px solid rgba(30, 64, 175, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.2s ease;
+}
+
+.rooms-details-history-item:hover {
+  background-color: #f3f4f6;
+  border-color: rgba(30, 64, 175, 0.2);
+}
+
+.rooms-details-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.rooms-details-history-action {
+  color: #1e40af;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.rooms-details-history-date {
+  color: #6b7280;
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.rooms-details-history-details {
+  color: #374151;
+  font-size: 13px;
+  margin: 0 0 4px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.rooms-details-history-guest {
+  color: #059669;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Actions */
+.rooms-details-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding: 24px;
+  border-top: 1px solid rgba(30, 64, 175, 0.1);
+  background-color: #f9fafb;
+  border-radius: 0 0 16px 16px;
+}
+
+.rooms-details-back-btn,
+.rooms-details-edit-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.rooms-details-back-btn {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.rooms-details-back-btn:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+.rooms-details-edit-btn {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(30, 64, 175, 0.2);
+}
+
+.rooms-details-edit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(30, 64, 175, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rooms-details-container {
+    padding: 10px;
+  }
+  
+  .rooms-details-wrapper {
+    max-height: 95vh;
+  }
+  
+  .rooms-details-title {
+    font-size: 20px;
+  }
+  
+  .rooms-details-header {
+    padding: 20px 20px 0 20px;
+  }
+  
+  .rooms-details-content {
+    padding: 0 20px 20px 20px;
+  }
+  
+  .rooms-details-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .rooms-details-section {
+    margin-bottom: 24px;
+  }
+  
+  .rooms-details-section-title {
+    font-size: 16px;
+  }
+  
+  .rooms-details-actions {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .rooms-details-back-btn,
+  .rooms-details-edit-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .rooms-details-title {
+    font-size: 18px;
+  }
+  
+  .rooms-details-header {
+    padding: 16px 16px 0 16px;
+  }
+  
+  .rooms-details-content {
+    padding: 0 16px 16px 16px;
+  }
+  
+  .rooms-details-value {
+    font-size: 13px;
+  }
+  
+  .rooms-details-description {
+    font-size: 13px;
+  }
+  
+  .rooms-details-amenity-tag {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+  
+  .rooms-details-history-item {
+    padding: 12px;
+  }
+  
+  .rooms-details-history-action {
+    font-size: 13px;
+  }
+  
+  .rooms-details-history-details {
+    font-size: 12px;
+  }
+}

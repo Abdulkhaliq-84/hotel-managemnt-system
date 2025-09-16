@@ -1,0 +1,443 @@
+/* Room Form Styles */
+.rooms-form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.rooms-form-wrapper {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(30, 64, 175, 0.2);
+  border: 1px solid rgba(30, 64, 175, 0.1);
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.rooms-form-title {
+  color: #1e40af;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  padding: 24px 24px 0 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.rooms-form {
+  padding: 24px;
+}
+
+.rooms-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.rooms-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rooms-form-section-title {
+  color: #1e40af;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  border-bottom: 2px solid rgba(30, 64, 175, 0.1);
+  padding-bottom: 8px;
+}
+
+.rooms-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rooms-form-label {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.rooms-form-input,
+.rooms-form-select,
+.rooms-form-textarea {
+  padding: 12px 16px;
+  border: 1px solid rgba(30, 64, 175, 0.2);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #374151;
+  transition: all 0.2s ease;
+}
+
+.rooms-form-input:focus,
+.rooms-form-select:focus,
+.rooms-form-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.rooms-form-input.error,
+.rooms-form-select.error,
+.rooms-form-textarea.error {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.rooms-form-input::placeholder,
+.rooms-form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.rooms-form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.rooms-form-error-message {
+  color: #ef4444;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.rooms-form-help-text {
+  color: #6b7280;
+  font-size: 12px;
+  font-style: italic;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.rooms-form-character-count {
+  color: #6b7280;
+  font-size: 12px;
+  text-align: right;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Price Input */
+.rooms-form-price-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(30, 64, 175, 0.2);
+  border-radius: 8px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.rooms-form-price-input:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.rooms-form-price-input.error {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.rooms-form-currency {
+  padding: 12px 8px 12px 16px;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #f9fafb;
+  border-right: 1px solid rgba(30, 64, 175, 0.2);
+}
+
+.rooms-form-price-input .rooms-form-input {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 12px 16px;
+}
+
+.rooms-form-price-input .rooms-form-input:focus {
+  box-shadow: none;
+}
+
+.rooms-form-price-display {
+  padding: 8px 12px;
+  background-color: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 6px;
+  color: #059669;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+}
+
+/* Checkbox Styles */
+.rooms-form-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.rooms-form-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #3b82f6;
+  cursor: pointer;
+}
+
+.rooms-form-checkbox-text {
+  color: #374151;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Amenities Section */
+.rooms-form-amenities-section {
+  grid-column: span 2;
+}
+
+.rooms-form-amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 12px;
+  border: 1px solid rgba(30, 64, 175, 0.1);
+  border-radius: 8px;
+  background-color: #f9fafb;
+}
+
+.rooms-form-amenity-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.rooms-form-amenity-checkbox:hover {
+  background-color: rgba(30, 64, 175, 0.05);
+}
+
+.rooms-form-amenity-text {
+  color: #374151;
+  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.rooms-form-custom-amenity {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.rooms-form-add-amenity-btn {
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.rooms-form-add-amenity-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(30, 64, 175, 0.3);
+}
+
+.rooms-form-add-amenity-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.rooms-form-selected-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid rgba(30, 64, 175, 0.1);
+  border-radius: 8px;
+  background-color: #f9fafb;
+  min-height: 20px;
+}
+
+.rooms-form-amenity-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: #ffffff;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.rooms-form-amenity-remove {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.rooms-form-amenity-remove:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.rooms-form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 24px;
+  border-top: 1px solid rgba(30, 64, 175, 0.1);
+}
+
+.rooms-form-cancel-btn,
+.rooms-form-save-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.rooms-form-cancel-btn {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.rooms-form-cancel-btn:hover:not(:disabled) {
+  background-color: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+.rooms-form-save-btn {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(30, 64, 175, 0.2);
+}
+
+.rooms-form-save-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(30, 64, 175, 0.3);
+}
+
+.rooms-form-cancel-btn:disabled,
+.rooms-form-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rooms-form-container {
+    padding: 10px;
+  }
+  
+  .rooms-form-wrapper {
+    max-height: 95vh;
+  }
+  
+  .rooms-form-title {
+    font-size: 20px;
+    padding: 20px 20px 0 20px;
+  }
+  
+  .rooms-form {
+    padding: 20px;
+  }
+  
+  .rooms-form-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .rooms-form-amenities-section {
+    grid-column: span 1;
+  }
+  
+  .rooms-form-amenities-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+  
+  .rooms-form-custom-amenity {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .rooms-form-actions {
+    flex-direction: column;
+  }
+  
+  .rooms-form-cancel-btn,
+  .rooms-form-save-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .rooms-form-title {
+    font-size: 18px;
+    padding: 16px 16px 0 16px;
+  }
+  
+  .rooms-form {
+    padding: 16px;
+  }
+  
+  .rooms-form-input,
+  .rooms-form-select,
+  .rooms-form-textarea {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  
+  .rooms-form-section-title {
+    font-size: 16px;
+  }
+  
+  .rooms-form-amenities-grid {
+    grid-template-columns: 1fr;
+  }
+}

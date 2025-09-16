@@ -1,0 +1,407 @@
+/* Reservation Table Styles */
+.reservation-table-container {
+  margin: 0;
+  width: 100%;
+}
+
+.table-wrapper {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(30, 64, 175, 0.1);
+  border: 1px solid rgba(30, 64, 175, 0.1);
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+.reservation-table {
+  width: 100%;
+  min-width: 1200px;
+  border-collapse: collapse;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.reservation-table thead {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+}
+
+.reservation-table th {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 16px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+}
+
+.reservation-table tbody tr {
+  border-bottom: 1px solid rgba(30, 64, 175, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.reservation-table tbody tr:hover {
+  background-color: rgba(30, 64, 175, 0.05);
+}
+
+.reservation-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.reservation-table td {
+  padding: 12px;
+  font-size: 13px;
+  color: #374151;
+  vertical-align: middle;
+}
+
+/* Column-specific styles */
+.guest-name {
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.email {
+  color: #6b7280;
+  font-family: 'Courier New', monospace;
+}
+
+.phone {
+  color: #6b7280;
+  font-family: 'Courier New', monospace;
+}
+
+.check-in,
+.check-out {
+  color: #6b7280;
+  font-family: 'Courier New', monospace;
+  white-space: nowrap;
+}
+
+.room-type {
+  text-transform: capitalize;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.room-number {
+  font-weight: 600;
+  color: #1e40af;
+  font-family: 'Courier New', monospace;
+}
+
+.total-price {
+  font-weight: 600;
+  color: #059669;
+  font-family: 'Courier New', monospace;
+}
+
+.status-cell,
+.payment-cell {
+  text-align: center;
+}
+
+.status-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-select {
+  padding: 4px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  font-size: 12px;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.status-select:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.1);
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.actions-cell {
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-pending {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.status-confirmed {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.status-checked-in {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #2563eb;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.status-checked-out {
+  background-color: rgba(107, 114, 128, 0.1);
+  color: #6b7280;
+  border: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+.status-cancelled {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Payment Badges */
+.payment-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.payment-pending {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.payment-paid {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.payment-refunded {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #ffffff;
+}
+
+.edit-btn {
+  background-color: #3b82f6;
+}
+
+.edit-btn:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+.status-btn {
+  background-color: #10b981;
+}
+
+.status-btn:hover {
+  background-color: #059669;
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  background-color: #ef4444;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .reservation-table {
+    min-width: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reservation-table {
+    min-width: 800px;
+  }
+  
+  .reservation-table th,
+  .reservation-table td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+  
+  .action-buttons {
+    gap: 4px;
+  }
+  
+  .action-btn {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .status-badge,
+  .payment-badge {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+}
+
+/* Payment Status Styles */
+.payment-status-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.payment-status-button:hover {
+  transform: scale(1.05);
+}
+
+.payment-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: white;
+  transition: all 0.2s;
+}
+
+.payment-icon {
+  font-size: 0.875rem;
+}
+
+.payment-pending {
+  background-color: #f59e0b;
+}
+
+.payment-paid {
+  background-color: #10b981;
+}
+
+.payment-failed {
+  background-color: #ef4444;
+}
+
+.payment-refunded {
+  background-color: #6b7280;
+}
+
+.payment-unknown {
+  background-color: #9ca3af;
+}
+
+/* Reservation Status Styles - Matching Payment Style */
+.reservation-status-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.reservation-status-button:hover {
+  transform: scale(1.05);
+}
+
+.reservation-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: white;
+  transition: all 0.2s;
+}
+
+.reservation-icon {
+  font-size: 0.875rem;
+}
+
+.reservation-pending {
+  background-color: #f59e0b;
+}
+
+.reservation-confirmed {
+  background-color: #3b82f6;
+}
+
+.reservation-checked-in {
+  background-color: #10b981;
+}
+
+.reservation-checked-out {
+  background-color: #6b7280;
+}
+
+.reservation-cancelled {
+  background-color: #ef4444;
+}
+
+.reservation-unknown {
+  background-color: #9ca3af;
+}
+
+@media (max-width: 480px) {
+  .reservation-table th,
+  .reservation-table td {
+    padding: 6px 4px;
+    font-size: 11px;
+  }
+  
+  .action-btn {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .action-btn svg {
+    width: 12px;
+    height: 12px;
+  }
+}
